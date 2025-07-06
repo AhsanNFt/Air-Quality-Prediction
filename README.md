@@ -61,27 +61,46 @@ My approach to AQI prediction involved the following steps:
 - S C I K I T - L E A R N
 
 ## 📉 Visualizations
+### Pollutants Over Time
+![image](https://github.com/user-attachments/assets/2e02bb53-a775-4a8e-9d3c-29667194fe44)
 
+**Insights:**
+PM2.5 and PM10 spike in winters (Nov–Jan) O3 and SO2 are less volatile Strong seasonal trends observed
+
+### Correlation between Pollutants and AQI
+![image](https://github.com/user-attachments/assets/ace018d2-6ff2-48ed-8071-e1f40b0f598c)
+
+**Insights:**
+AQI is highly correlated with PM2.5 (0.94) and PM10 (0.89) Moderate correlation with NO, NO2, CO O3 and SO2 have weaker correlation ✅ Why: Guides feature selection — strong predictors help model accuracy.
+
+### Actual vs Predicted AQI
+![image](https://github.com/user-attachments/assets/1a2b7c2a-e41d-48ae-86ee-20d810eebb3b)
+
+**Insights:** 
+- Random Forest closely follows actual AQI
+- Linear regression misses peaks and drops
+- Confirms that AQI behavior is non-linear
 
 ## 📊 Results and Insights
 
-### Key Insights:
-  - The analysis typically reveals the most influential pollutants contributing to AQI.
-  - Seasonal and daily patterns in air quality can be identified, providing insights into pollution sources and times.
-  - Regression models can effectively predict AQI, offering a tool for forecasting and early warning systems.
-    
-### Final Outcome:
-  - This project successfully demonstrates a comprehensive approach to AQI prediction using machine learning.
-  - The developed models can serve as a foundation for real-time air quality monitoring and prediction systems.
+- PM2.5 and PM10 are the most significant contributors to AQI levels.
 
+- Seasonal patterns were observed, with higher AQI in winter months.
+
+- Random Forest outperformed Linear Regression, effectively capturing the non-linear relationships between   pollutants and AQI.
+
+- Random Forest showed better generalization and more accurate AQI classification.
+
+- Models are effective for real-time AQI forecasting and can support alert systems for public health         monitoring.
+- 
 ## 🧪 Usage
 
 ```bash
 # 1. Clone the repository (assuming this notebook is part of a larger repository)
-git clone <repository_url>
+git clone https://github.com/AhsanNFt/Air-Quality-Prediction.git
 
 # 2. Navigate to the project directory
-cd <project_directory>
+cd Air-Quality-Prediction
 
 # 3. Open the notebook
 jupyter notebook Air_Quality_Detection_Main.ipynb
